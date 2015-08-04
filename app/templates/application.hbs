@@ -1,0 +1,20 @@
+{{outlet}}
+
+<div><strong>What's your name?</strong></div>
+<div>{{input value=myName placeholder="Enter your name"}}</div>
+
+<h3>Messages</h3>
+
+<div>
+	<ul>
+		{{#each message in messages}}
+			<li>{{message.name}} says "{{message.message}}"</li>
+		{{else}}
+			<li><em>Nothing to see here</em></li>
+		{{/each}}
+	</ul>
+</div>
+
+{{input value=myMessage placeholder="Enter message here"}}
+
+<button {{action 'sendMessage'}}>Send</button>
